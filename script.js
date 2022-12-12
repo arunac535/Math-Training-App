@@ -14,30 +14,29 @@ let indexofAns;
 let interval;
 const options=[option1,option2,option3,option4];
 
-// You should write code for step 3 from here.
 // Declare all the global variables
 
 const generateNumber = (lower, upper) => {
     const randomNumber=Math.ceil(Math.random()*(upper-lower))+lower;
     return randomNumber;
     // Generates a random number which is present in between lower bound and upper bound.
-    // You should complete this function here
+
     
 }
 const generateOperator = () => {
     const opr=["+","-","*","/"];
     // let r=opr[Math.ceil(Math.random()*opr.length)]
+    // Generates a random operator which is present in arrayOfOperator.
     let randomNumber=generateNumber(-1,opr.length-1);
     console.log(opr[randomNumber]);
     return opr[randomNumber];
     
     
-    // Generates a random operator which is present in arrayOfOperator.
-    // You should complete this function here
+
+
     
 }
 
-// You should write code for step 4 from here.
 const generateQuestion = () => {
     operand1.innerHTML = generateNumber(-50, 50);
     operand2.innerHTML = generateNumber(-50, 50);
@@ -52,9 +51,9 @@ const generateQuestion = () => {
 }
 
     // sets the value of `operand1`, `operator` and `operand2` fields.
-    // You should complete this function here
+
 const generateAnswer = () => {
-    // You should complete this function here
+
    generateQuestion();
    let a = parseInt(operand1.innerHTML);
    let b = parseInt(operand2.innerHTML);
@@ -88,7 +87,7 @@ const generateAnswer = () => {
    clearInterval(interval);
 
 }
-// You should write code for step 5 from here.
+
 for(let i=0;i<options.length;i++){
     options[i].addEventListener("click",function(){
         for(let j=0;j<options.length;j++){
@@ -115,5 +114,5 @@ for(let i=0;i<options.length;i++){
 
 }
 
-// You should call the generateAnswer() function here
+//Calling the  generateAnswer() function here
 generateAnswer();
